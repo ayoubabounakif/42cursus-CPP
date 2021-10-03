@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aabounak <aabounak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/03 15:01:49 by aabounak          #+#    #+#             */
-/*   Updated: 2021/10/03 17:01:04 by aabounak         ###   ########.fr       */
+/*   Created: 2021/10/03 17:01:51 by aabounak          #+#    #+#             */
+/*   Updated: 2021/10/03 17:50:44 by aabounak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Array.hpp"
+# include <iostream>
+# include <string>
+# include <list>
 
-int main ( int, char ** )
-{
-    Array<int> eurrr = Array<int>(10);
-    for (unsigned int i = 0; i < 15; i++)
+template < typename T >
+void    easyfind( T intContainer, int toFind ) {
+    
+    intContainer::iterator it = intContainer.begin();
+    
+    for (; it != intContainer.end(); ++it)
     {
-        try {
-            std::cout << eurrr[i] << std::endl;
-        }
-        catch ( std::exception &e ) {
-            std::cout << e.what() << std::endl;
-        }
+        std::cout << *it << std::endl;
+        if (*it == toFind)
+            return (*it);
     }
-    std::cout << eurrr.size() << std::endl;
-    return (EXIT_SUCCESS);
+    return ;
 }
+

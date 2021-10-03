@@ -5,25 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aabounak <aabounak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/03 15:01:49 by aabounak          #+#    #+#             */
-/*   Updated: 2021/10/03 17:01:04 by aabounak         ###   ########.fr       */
+/*   Created: 2021/10/03 17:01:24 by aabounak          #+#    #+#             */
+/*   Updated: 2021/10/03 17:50:44 by aabounak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Array.hpp"
+# include "easyfind.hpp"
 
-int main ( int, char ** )
+int	main( int, char ** )
 {
-    Array<int> eurrr = Array<int>(10);
-    for (unsigned int i = 0; i < 15; i++)
-    {
-        try {
-            std::cout << eurrr[i] << std::endl;
-        }
-        catch ( std::exception &e ) {
-            std::cout << e.what() << std::endl;
-        }
-    }
-    std::cout << eurrr.size() << std::endl;
-    return (EXIT_SUCCESS);
+	// int	values[5] = {1, 2, 3, 4, 5};
+	// 	easyfind(values, 3);
+
+	std::list<int> lst;
+	lst.push_back(1);
+	lst.push_back(3);
+	lst.push_back(6);
+	lst.push_back(8);
+	std::list<int>::iterator it = lst.begin();
+	for (; it != lst.end(); ++it)
+		std::cout << *it << std::endl;
+	std::cout << "---------------" << std::endl;
+	easyfind(lst, 6);
+	return (EXIT_SUCCESS);
 }
