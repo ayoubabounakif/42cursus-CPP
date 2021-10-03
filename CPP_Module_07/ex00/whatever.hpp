@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aabounak <aabounak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/03 15:01:49 by aabounak          #+#    #+#             */
-/*   Updated: 2021/10/03 16:49:53 by aabounak         ###   ########.fr       */
+/*   Created: 2021/10/03 14:06:08 by aabounak          #+#    #+#             */
+/*   Updated: 2021/10/03 14:35:11 by aabounak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Array.hpp"
+# include <iostream>
 
-int main ( int, char ** )
-{
-    Array<int> eurrr = Array<int>(10);
-    for (unsigned int i = 0; i < 15; i++)
-    {
-        try {
-            std::cout << eurrr[i] << std::endl;
-        }
-        catch ( std::exception &e ) {
-            std::cout << e.what() << std::endl;
-        }
-    }
-    std::cout << eurrr.size() << std::endl;
-    return (EXIT_SUCCESS);
+template < typename T>
+T const & max( T const & x, T const & y) {
+    return (x >= y ? x : y);
+}
+
+template < typename T>
+T const & min( T const & x, T const & y) {
+    return (x <= y ? x : y);
+}
+
+template < typename T>
+void swap( T & x, T & y) {
+    T   tmp;
+    tmp = x;
+    x = y;
+    y = tmp;
 }
