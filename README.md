@@ -23,3 +23,6 @@ This module is designed to help you understand the different casts in CPP.
 
 ## Module 07:
 This module is designed to help you understand Templates in CPP.
+
+## Module 08:
+This module is designed to help you understand templated containers, iterators and algorithms in CPP.
