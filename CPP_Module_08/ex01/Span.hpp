@@ -6,7 +6,7 @@
 /*   By: aabounak <aabounak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 10:58:12 by aabounak          #+#    #+#             */
-/*   Updated: 2021/10/04 14:42:48 by aabounak         ###   ########.fr       */
+/*   Updated: 2021/10/04 18:49:19 by aabounak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <array>
 # include <list>
 # include <vector>
-# include <span>
 
 class Span
 {
@@ -47,7 +46,7 @@ class Span
             virtual const char	* what() const throw() {
                 return ("No span to find");
             }
-		}; 
+		};
 		class		OutOfBounds : public std::exception {
         public:
             virtual const char	* what() const throw() {

@@ -6,7 +6,7 @@
 /*   By: aabounak <aabounak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 17:01:24 by aabounak          #+#    #+#             */
-/*   Updated: 2021/10/03 17:50:44 by aabounak         ###   ########.fr       */
+/*   Updated: 2021/10/04 10:55:56 by aabounak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,15 @@
 
 int	main( int, char ** )
 {
-	// int	values[5] = {1, 2, 3, 4, 5};
-	// 	easyfind(values, 3);
-
 	std::list<int> lst;
-	lst.push_back(1);
-	lst.push_back(3);
-	lst.push_back(6);
-	lst.push_back(8);
+	lst.push_back(42);
+	lst.push_back(69);
+	lst.push_back(420);
+	lst.push_back(1337);
 	std::list<int>::iterator it = lst.begin();
 	for (; it != lst.end(); ++it)
 		std::cout << *it << std::endl;
 	std::cout << "---------------" << std::endl;
-	easyfind(lst, 6);
+	easyfind(lst, 20);
 	return (EXIT_SUCCESS);
 }
