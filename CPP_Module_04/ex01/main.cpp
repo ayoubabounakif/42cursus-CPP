@@ -6,7 +6,7 @@
 /*   By: aabounak <aabounak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 17:44:06 by aabounak          #+#    #+#             */
-/*   Updated: 2021/09/26 16:53:30 by aabounak         ###   ########.fr       */
+/*   Updated: 2021/10/04 14:59:24 by aabounak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int main( void )
     std::cout << "---------- Constructors -----------" << std::endl;
     
     Cat obj;
-    obj.getBrain()->setIdeas("I'm a cat");
+    obj.getBrain()->setIdeas("Hi I'm a cat");
     Cat objBis(obj);
 
     std::cout << "-------------------------------" << std::endl;
