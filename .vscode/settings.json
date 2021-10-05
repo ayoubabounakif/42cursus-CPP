@@ -67,6 +67,7 @@
         "filesystem": "cpp",
         "__cxx_version": "cpp",
         "__functional_03": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "span": "cpp"
     }
 }

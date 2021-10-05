@@ -6,14 +6,15 @@
 /*   By: aabounak <aabounak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/03 15:01:48 by aabounak          #+#    #+#             */
-/*   Updated: 2021/10/03 16:07:16 by aabounak         ###   ########.fr       */
+/*   Updated: 2021/10/04 18:54:54 by aabounak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include <iostream>
 # include <exception>
 
-template < typename T > class Array
+template < typename T >
+class Array
 {
     private:
         T   *        _arr;
