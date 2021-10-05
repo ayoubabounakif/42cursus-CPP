@@ -1,7 +1,7 @@
 NAME = mstack
 CC = clang++
-CFLAGS = -Wall -Werror -Wextra -Wconversion
-SRC = main.cpp MutantStack.cpp
+# CFLAGS = -Wall -Werror -Wextra -Wconversion
+SRC = main.cpp
 
 all: $(NAME)
 

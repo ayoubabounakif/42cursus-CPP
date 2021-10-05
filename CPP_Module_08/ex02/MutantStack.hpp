@@ -6,7 +6,7 @@
 /*   By: aabounak <aabounak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 18:15:15 by aabounak          #+#    #+#             */
-/*   Updated: 2021/10/04 18:54:53 by aabounak         ###   ########.fr       */
+/*   Updated: 2021/10/05 11:31:47 by aabounak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,23 @@
 # include <vector>
 # include <stack>
 
-template < typename T >
+template < class T, class Container = std::deque<T> >
 class MutantStack : public std::stack <T>
 {
-
 	public:
-		MutantStack();
-		MutantStack( MutantStack const & src );
-		~MutantStack();
-
-		MutantStack &	operator=( MutantStack const & rhs );
-
-	private:
+		MutantStack() { std::cout << "MS Constructor called" << std::endl; };
+		MutantStack( MutantStack const & src ) {
+			std::cout << "MS Copy Constructor called" << std::endl;
+			*this = src; };
+		~MutantStack() { std::cout << "MS Destructor called" << std::endl; };
+		MutantStack &	operator=( MutantStack const & rhs ) {
+			(void)rhs;
+			return *this;
+		};
+		
+		typedef	typename	std::stack<T>::container_type::iterator iterator;
+		iterator			begin() { return (std::stack<T>::c.begin()); };
+		iterator			end() { return (std::stack<T>::c.end()); };
 
 };
 
