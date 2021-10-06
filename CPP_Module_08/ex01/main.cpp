@@ -6,7 +6,7 @@
 /*   By: aabounak <aabounak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 10:58:24 by aabounak          #+#    #+#             */
-/*   Updated: 2021/10/04 18:13:21 by aabounak         ###   ########.fr       */
+/*   Updated: 2021/10/05 12:00:23 by aabounak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 int	main( int, char ** )
 {
 	try {
-		Span sp = Span(1);
+		Span sp = Span(10000);
 		std::vector < unsigned int > vec(10000);
 		srand((unsigned)time(NULL));
 		for (std::vector< unsigned int >::iterator it = vec.begin(); it != vec.end(); ++it) {
